@@ -5,7 +5,7 @@ The following API functions are available:
 
 ## Chat
 
-### `getUsers` - Get all users
+### `getUsers` - Get all users 
 
 Input - `None`
 
