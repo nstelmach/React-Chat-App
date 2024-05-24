@@ -1,19 +1,17 @@
-import { Container, Typography } from "@mui/material";
-// import "./main.css"; // only import if you want to use tailwindcss
+import "./main.css";
+import { ChatRouter } from "./components/ChatRouter/ChatRouter.tsx";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Provider } from "react-redux";
+import { store } from "./store/store.ts";
 
-function App() {
+const queryClient = new QueryClient();
+
+export const App = () => {
   return (
-    <Container
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      <Typography variant="h4">React Chat App</Typography>
-    </Container>
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
+        <ChatRouter />
+      </Provider>
+    </QueryClientProvider>
   );
-}
-
-export default App;
+};
