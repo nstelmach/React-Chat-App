@@ -1,15 +1,14 @@
 import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { AccountCircle } from "@mui/icons-material";
 import { User } from "../../models/user.ts";
+import { FunctionComponent } from "react";
 
 type UserProps = {
   user: User;
   onClick: (user: User) => void;
 };
 
-const UserBar = (props: UserProps) => {
-  const { user, onClick } = props;
-
+export const UserBar: FunctionComponent<UserProps> = ({ user, onClick }) => {
   return (
     <ListItemButton
       sx={{
@@ -24,5 +23,3 @@ const UserBar = (props: UserProps) => {
     </ListItemButton>
   );
 };
-
-export default UserBar;

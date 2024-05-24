@@ -1,7 +1,8 @@
 import { Box, Typography } from "@mui/material";
-import UserList from "./UserList.tsx";
+import { ChatRoomList } from "./ChatRoomList.tsx";
+import { FunctionComponent } from "react";
 
-const ChatroomList = () => {
+export const ChatRoomListContainer: FunctionComponent = () => {
   return (
     <Box
       sx={{
@@ -14,9 +15,7 @@ const ChatroomList = () => {
       >
         <Typography sx={{ fontSize: "24px" }}>Open Chats</Typography>
       </Box>
-      <UserList activeUsers={activeUsers} openChatroom={onOpenChatroom} />
+      <ChatRoomList />
     </Box>
   );
 };
-
-export default ChatroomList;
