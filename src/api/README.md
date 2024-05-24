@@ -1,11 +1,10 @@
-
 ## API Documentation
 
 The following API functions are available:
 
 ## Chat
 
-### `getUsers` - Get all users 
+### `getUsers` - Get all users
 
 Input - `None`
 
@@ -21,7 +20,7 @@ Output - `Chat`
 
 Input - `string` userId
 
-Output - `User` | `404` if no user with this id was found
+Output - `UserBar` | `404` if no user with this id was found
 
 ## Chatroom
 
