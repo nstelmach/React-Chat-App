@@ -1,6 +1,7 @@
 import { User } from "../models/user.ts";
 import { API_URL } from "../constants.ts";
 import { handleApiResponse } from "./index.ts";
+import { useQuery } from "@tanstack/react-query";
 
 export const postRegister = async (data: {
   username: string;
@@ -28,6 +29,12 @@ export const postRefresh = async (storedUserId: string): Promise<User> => {
   );
 };
 
-export const getUsers = async (): Promise<User[]> => {
-  return handleApiResponse<User[]>(await fetch(`${API_URL}/user/users`));
-};
+export const useGetUsers = (refetchInterval: number | false = false) =>
+  useQuery<User[]>({
+    initialData: [],
+    queryKey: ["GET_USERS"],
+    queryFn: async () => {
+      return handleApiResponse<User[]>(await fetch(`${API_URL}/user/users`));
+    },
+    refetchInterval: refetchInterval,
+  });
