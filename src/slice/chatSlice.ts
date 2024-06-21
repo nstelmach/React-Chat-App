@@ -1,6 +1,6 @@
 import { ChatRoom } from "../models/user.ts";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { useAppSelector } from "../store/sth.ts";
+import { useAppSelector } from "../store/hooks.ts";
 
 export type ChatStore = {
   currentChatRoom: ChatRoom | null;

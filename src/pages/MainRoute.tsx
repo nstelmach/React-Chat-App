@@ -6,7 +6,7 @@ import { ChatPage } from "./ChatPage.tsx";
 import { RegisterPage } from "./RegisterPage.tsx";
 import { Page } from "../models/page.ts";
 import { setUser } from "../slice/userSlice.ts";
-import { useAppDispatch } from "../store/sth.ts";
+import { useAppDispatch } from "../store/hooks.ts";
 
 export const MainRoute: Page = () => {
   const navigate = useNavigate();

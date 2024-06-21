@@ -6,7 +6,7 @@ import { FunctionComponent, useEffect } from "react";
 import { getChatRoom, postMessage } from "../../api/chatroom.ts";
 import { useUserSlice } from "../../slice/userSlice.ts";
 import { setCurrentChatRoom, useChatSlice } from "../../slice/chatSlice.ts";
-import { useAppDispatch } from "../../store/sth.ts";
+import { useAppDispatch } from "../../store/hooks.ts";
 
 export const ChatWindow: FunctionComponent = () => {
   const { currentChatRoom } = useChatSlice();

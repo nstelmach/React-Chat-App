@@ -6,7 +6,7 @@ import { ChatPage } from "./ChatPage.tsx";
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { setUser } from "../slice/userSlice.ts";
-import { useAppDispatch } from "../store/sth.ts";
+import { useAppDispatch } from "../store/hooks.ts";
 
 export const RegisterPage: Page = () => {
   const inputRef = useRef<HTMLInputElement>(null);

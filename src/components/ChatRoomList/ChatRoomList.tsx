@@ -4,7 +4,7 @@ import { FunctionComponent } from "react";
 import { setCurrentChatRoom, useChatSlice } from "../../slice/chatSlice.ts";
 import { useGetOpenChatRooms } from "../../api/chatroom.ts";
 import { useUserSlice } from "../../slice/userSlice.ts";
-import { useAppDispatch } from "../../store/sth.ts";
+import { useAppDispatch } from "../../store/hooks.ts";
 
 export const ChatRoomList: FunctionComponent = () => {
   const { user } = useUserSlice();
