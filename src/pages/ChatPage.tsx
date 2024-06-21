@@ -12,4 +12,4 @@ export const ChatPage: Page = () => {
   );
 };
 
-ChatPage.path = "/chat";
+ChatPage.path = "/React-Chat-App/chat";

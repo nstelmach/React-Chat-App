@@ -53,4 +53,4 @@ export const RegisterPage: Page = () => {
   );
 };
 
-RegisterPage.path = "/register";
+RegisterPage.path = "/React-Chat-App/register";

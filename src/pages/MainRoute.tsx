@@ -34,4 +34,4 @@ export const MainRoute: Page = () => {
   return <Outlet />;
 };
 
-MainRoute.path = "/";
+MainRoute.path = "/React-Chat-App/";
